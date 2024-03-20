@@ -9,7 +9,7 @@ let r, g, b;
 
 //function setup happen once
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   background(0);
 }
 

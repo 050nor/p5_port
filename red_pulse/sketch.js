@@ -9,7 +9,7 @@ let r, g, b;
 
 //function setup happen once
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   background(0);
 }
 
@@ -22,8 +22,8 @@ function mousePressed() {
 //function draw is a loop 60fps(adjustable)
 function draw() {
   circleColorR = random(100, 255);
-  circleX = random(199, 201);
-  circleY = random(199, 201);
+  circleX = random(width / 2 - 1, width / 2 + 1);
+  circleY = random(height / 2 - 1, height / 2 + 1);
   r = 255; //random(255);
   g = 0; //random(100);
   b = 0; //random(100);
