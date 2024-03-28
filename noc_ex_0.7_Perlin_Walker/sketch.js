@@ -1,7 +1,7 @@
 let walker;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   walker = new Walker();
   background(255);
 }
@@ -23,7 +23,7 @@ class Walker {
     strokeWeight(1);
     fill(127);
     stroke(0);
-    circle(this.x, this.y, 20);
+    circle(this.x, this.y, width / 23);
   }
 
   step() {

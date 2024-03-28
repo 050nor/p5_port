@@ -1,18 +1,18 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   background(0);
 }
 
 function draw() {
-  let x = randomGaussian(width / 2, 30);
-  let y = randomGaussian(height / 2, 30);
+  let x = randomGaussian(width / 2, width / 27);
+  let y = randomGaussian(height / 2, height / 27);
   let r = randomGaussian(150, 30);
   let g = randomGaussian(170, 30);
   let b = randomGaussian(180, 30);
 
   noStroke();
   fill(r, g, b, 50);
-  circle(x, y, 20);
+  circle(x, y, width / 29);
 }
 
 function keyPressed() {

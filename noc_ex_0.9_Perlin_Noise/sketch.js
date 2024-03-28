@@ -3,7 +3,7 @@ let slider2;
 let z;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 
   z = 0;
 
@@ -28,13 +28,13 @@ function draw() {
       noiseDetail(slider.value(), slider2.value());
       let bright = map(noise(xoff, yoff, z), 0, 1, 0, 255); // A random Brightness use Perlin (with x,y off)
 
-      pixels[index] = 100;
+      pixels[index] = 100; // set red value
       pixels[index + 1] = bright;
-      pixels[index + 2] = bright; // set rgb values
+      pixels[index + 2] = bright; // set gb values
       pixels[index + 3] = 255; // set alpha
-      yoff += 0.05;
+      yoff += 0.02;
     }
-    xoff += 0.05;
+    xoff += 0.025;
   }
   updatePixels();
   z += 0.03;
